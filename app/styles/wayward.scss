@@ -1,0 +1,58 @@
+@import '../../bower_components/animate.css/animate.css';
+
+body {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+#logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -15vw;
+    margin-left: -15vw;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    user-select: none;
+
+    animation-duration: 1.5s;
+}
+
+#logo img {
+    width: 30vw;
+    height: 30vw;
+}
+
+#logo.fade-in {
+    opacity: 1;
+}
+
+#mail {
+    visibility: hidden;
+
+    &.animated {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50%;
+        margin-left: -50%;
+        opacity: 0;
+        transition: opacity 1s ease-in;
+        user-select: none;
+        width: 100%;
+        padding: 1.428em;
+    }
+
+    #logo img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+}
