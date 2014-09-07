@@ -7,13 +7,18 @@ if (!Modernizr.svg) {
 
     // Animation
     $('#logo').addClass('animated fadeInUpBig').one(animationend, function () {
-        $('#mail').addClass('animated fadeInUp');
-        $('.left').addClass('animated fadeInLeft');
-        $('.right').addClass('animated fadeInRight');
-        $(this).addClass('loaded');
+        var that = $(this);
+
         window.setTimeout(function () {
-            $('.promo-container').addClass('loaded');
+            $('#mail').addClass('animated fadeInUp');
+            $('.left').addClass('animated fadeInLeft');
+            $('.right').addClass('animated fadeInRight');
+            that.addClass('loaded');
+            window.setTimeout(function () {
+                $('.promo-container').addClass('loaded');
+            }, 1000);
         }, 1000);
+
     });
 
 // });
