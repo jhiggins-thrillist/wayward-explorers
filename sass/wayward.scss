@@ -1,0 +1,379 @@
+$jet: #333;
+
+$body-font-family: 'Hoefler Text A', 'Hoefler Text B';
+$body-font-weight: 400;
+$body-font-style: normal;
+
+$header-font-family: 'Verlag A', 'Verlag B';
+$header-font-weight: 400;
+$header-font-style: normal;
+
+$button-font-family: 'Verlag A', 'Verlag B';
+
+$header-line-height: 1.618;
+
+$paragraph-line-height: 1.8;
+
+$primary-color: #fcfcfc;
+$topbar-bg-color: #fff;
+$topbar-link-color: #000;
+$topbar-link-color-active: #000;
+$topbar-link-color-hover: #000;
+$topbar-link-color-active-hover: #000;
+// $topbar-link-bg-active: #fff;
+$topbar-link-bg-hover: #eee;
+$topbar-link-bg-active-hover: #eee;
+$topbar-link-bg-color-hover: #eee;
+$topbar-menu-icon-color: black;
+
+$topbar-dropdown-link-color: #000;
+$topbar-dropdown-link-bg: white;
+$topbar-dropdown-link-bg-active: white;
+
+$topbar-link-font-family: 'Helvetica Neue', 'Helvetica', sans;
+$topbar-link-weight: bold;
+$topbar-link-font-size: 12px;
+// $header-font-color: #333;
+
+@import 'public/components/scut/dist/scut';
+@import 'public/components/foundation/scss/normalize';
+@import 'public/components/foundation/scss/foundation';
+@import 'public/components/animate.scss/scss/animate';
+
+.font-header {
+    font-family: 'Tungsten A', 'Tungsten B';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-heavy {
+    font-family: 'Helvetica';
+    font-weight: 600;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    @extend .font_header;
+}
+
+ul {
+    @include scut-list-unstyled;
+}
+
+.content {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/**
+ * Header
+ **/
+// .nav-link {
+//     display: block;
+//     margin-top: 8px;
+//     margin-left: 8px;
+// }
+
+.menu-logo {
+    margin-left: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+.nav-header {
+    background: rgba(255, 255, 255, 0.99);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid #eee;
+    z-index: 100;
+}
+
+.nav-list {
+    display: inline-flex;
+    width: calc(100% - 100px);
+    max-width: 640px;
+    flex-direction: row;
+    justify-content: space-around;
+    float: right;
+    height: 100%;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        text-align: left;
+    }
+
+    li {
+        margin: auto 0;
+    }
+
+    a {
+        @extend .font-heavy;
+        color: black;
+        display: inline-block;
+        cursor: pointer;
+        opacity: 0.30;
+        font-size: 0.8em;
+        margin-right: 1em;
+        transition: opacity 0.25s linear;
+        text-transform: none;
+
+        &.active {
+            // text-decoration: underline;
+            border-bottom: 1px solid #c0c0c0;
+        }
+    }
+
+    &:hover a {
+        opacity: 0.1;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+
+/**
+ * Slideshow
+ */
+
+.orbit-container {
+
+    & + .row {
+        margin-top: 1.618em;
+    }
+
+}
+
+.orbit-slides-container img {
+    width: 100%;
+    height: auto;
+}
+
+.slideshow-image {
+    margin: 0;
+    background-size: contain;
+    background-position: top center;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 3rem;
+}
+
+.slideshow-image-1 {
+    background-image: url('/img/bg/vintage_store.jpg');
+}
+
+/**
+ * Video
+ */
+.video-container {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden
+}
+
+.list-left {
+    width: 30%;
+    padding: 0 1.416em;
+}
+
+.list-right {
+    width: 30%;
+}
+
+.nav-logo {
+    margin: 0 auto;
+    width: 100px;
+    height: 25px;
+    background-image: url('/img/logo_nav_antlers.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.main-link {
+    @extend .font-header;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white !important;
+    z-index: 1;
+    font-size: 5em;
+
+    &:hover {
+        color: #eee;
+    }
+
+}
+
+
+/**
+ * Backgrounds
+ */
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.bg-shop {
+    background: url('http://3.bp.blogspot.com/-q5_OaRDUnrw/T6p5v7zGtaI/AAAAAAAADGE/icC8r8CV10c/s1600/tenue_de_nimes_06.jpg');
+    background: url('/img/bg/mountains.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.bg-studio {
+    background: url('http://www.comohotels.com/umaparo/sites/default/files/styles/background_image/public/images/background/umaparo_bkg_yoga_studio_meditation.jpg');
+    background: url('/img/bg/wood.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.main-side {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    user-select: none;
+}
+
+.absolute-center-parent:before {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.absolute-center {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.main-left {
+    left: 0;
+}
+
+.main-right {
+    right: 0;
+}
+
+.main-left a, .main-right a {
+    background: rgba(255, 255, 255, 0.0);
+    transition: background 0.1s linear;
+}
+
+.main-left a:hover, .main-right a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#logo, .logo-secondary {
+    background: white;
+    border-radius: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -10vw;
+    margin-left: -10vw;
+    opacity: 0;
+}
+
+.logo-secondary {
+    background: none;
+    z-index: 1;
+}
+
+#logo #logoImage {
+    transition: opacity 1s ease-in;
+    user-select: none;
+    animation-duration: 1.5s;
+    z-index: 10;
+}
+
+#logo #secondaryImage {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+#logo img, .logo-secondary img {
+    width: 20vw;
+    height: 20vw;
+}
+
+#logo #logoImage {
+    transform: scale(1.00) translate3d(0, 0, 0);
+    transition-delay: 2s;
+    transition: transform 1s ease-in-out;
+}
+
+#logo #secondaryImage {
+    transition-delay: 2s;
+    transition: opacity 3s ease-in-out;
+}
+
+#logo.loaded #logoImage {
+    transform: scale(0.2) translate3d(0, -115%, 0);
+}
+
+#logo.loaded #secondaryImage {
+    opacity: 1;
+}
+
+@media screen and (max-device-width: 480px) {
+
+    #logo img, .logo-secondary img {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    #logo, .logo-secondary {
+        margin-top: -25vw;
+        margin-left: -25vw;
+    }
+
+    .main-side .main-link {
+        margin-right: 0;
+
+        &:before {
+            content: none;
+        }
+
+        & > * {
+            padding-top: 50%;
+            font-size:0.5em;
+            position: absolute;
+            text-align: center;
+            margin: 0;
+            display: block;
+            width: 100%;
+        }
+
+        &.main-left > * {
+            top: 1em;
+        }
+
+        &.main-right > * {
+            bottom: 1em;
+        }
+    }
+}

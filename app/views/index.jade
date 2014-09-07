@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+    div(class="container text-center")
+
+        div(class="left main-side main-left")
+            div(class="bg bg-shop layer" data-depth="0.2")
+            div(class="bg")
+                a(href="/shop-clothing" class="main-link shop-link absolute-center-parent")
+                    span(class="absolute-center") Shop
+
+        div(class="right main-side main-right")
+            div(class="bg bg-studio")
+                a(href="/hot-yoga-studio" class="main-link studio-link absolute-center-parent")
+                    span(class="absolute-center") Studio
+
+        div(id="logo")
+            img(id="logoImage" src="/img/logo_antlers.svg")
+            img(id="secondaryImage" src="/img/logo_no_antlers.svg")
+
+
+    //- div(class="video-container" bgcolor="#fff" style="position: fixed; top: 0;width: 100%; height: 100%; background-color: transparent;")
+    //-     video(width="320" height="240" autoplay loop="loop" style="width: 100%; height: 100%;")
+    //-         source(src="/video/yoga2.mp4" type="video/mp4")

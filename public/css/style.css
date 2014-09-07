@@ -1,0 +1,266 @@
+html, body {
+    height: 100%;
+}
+
+a {
+    font-family: 'Tungsten A', 'Tungsten B'; font-weight: 400; font-style: normal;
+    text-transform: uppercase;
+}
+
+/**
+ * Header
+ **/
+.nav-header {
+    background: rgba(255, 255, 255, 0.99);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-header ul {
+    font-family: 'Tungsten A', 'Tungsten B'; font-weight: 400; font-style: normal;
+    list-style: none;
+    margin: 0;
+    text-align: left;
+}
+
+.nav-header:hover li {
+    opacity: 0.1;
+}
+
+.nav-header:hover li:hover {
+    opacity: 0.9;
+}
+
+.nav-header li {
+    cursor: pointer;
+    opacity: 0.3;
+    display: inline-block;
+    font-family: "Helvetica";
+    font-weight: 600;
+    font-size: 0.8em;
+    margin-right: 1em;
+    transition: opacity 0.25s linear;
+    -webkit-transition: opacity 0.25s linear;
+}
+
+.slideshow-image-1 {
+    margin: 0;
+    background-image: url('/img/bg/wood.jpg');
+    background-size: contain;
+    background-position: top center;
+    width: 100%;
+    padding-bottom: 75%;
+}
+
+.video-container {
+    position: absolute;
+  bottom: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden
+}
+
+.nav-list {
+    display: inline-flex;
+    width: calc(100% - 100px);
+    max-width: 640px;
+    flex-direction: row;
+    justify-content: space-around;
+    float: right;
+    height: 100%;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-around;
+}
+
+.nav-list li {
+    margin: auto 0;
+}
+
+.list-left {
+    width: 30%;
+    padding: 0 1.416em;
+}
+
+.list-right {
+    width: 30%;
+}
+
+.nav-logo {
+    margin: 0 auto;
+    width: 100px;
+    height: 25px;
+    background-image: url('/img/logo_nav_antlers.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+.main-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white !important;
+    z-index: 1;
+    font-size: 5em;
+}
+
+.main-link:hover {
+    color: #eee;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.bg-shop {
+    background: url('http://3.bp.blogspot.com/-q5_OaRDUnrw/T6p5v7zGtaI/AAAAAAAADGE/icC8r8CV10c/s1600/tenue_de_nimes_06.jpg');
+    background: url('/img/yoga.jpg');
+    background: url('/img/bg/forest.png');
+    background: url('/img/bg/mountains.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.bg-studio {
+    background: url('http://www.comohotels.com/umaparo/sites/default/files/styles/background_image/public/images/background/umaparo_bkg_yoga_studio_meditation.jpg');
+    background: url('/img/yoga.jpg');
+    background: url('/img/bg/wood.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.main-side {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    user-select: none;
+}
+
+.absolute-center-parent:before {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.absolute-center {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.main-left {
+    left: 0;
+}
+
+.main-right {
+    right: 0;
+}
+
+.main-left a, .main-right a {
+    background: rgba(255, 255, 255, 0.0);
+    transition: background 0s linear;
+}
+
+.main-left a:hover, .main-right a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#logo, .logo-secondary {
+    background: white;
+    border-radius: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -10vw;
+    margin-left: -10vw;
+    opacity: 0;
+}
+
+.logo-secondary {
+    background: none;
+    z-index: 1;
+}
+
+#logo #logoImage {
+    transition: opacity 1s ease-in;
+    user-select: none;
+    animation-duration: 1.5s;
+
+    -webkit-transition: opacity 1s ease-in;
+    -webkit-animation-duration: 1.5s;
+
+    z-index: 10;
+}
+
+#logo #secondaryImage {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+#logo img, .logo-secondary img {
+    width: 20vw;
+    height: 20vw;
+}
+
+#logo #logoImage {
+    transform: scale(1.00) translateY(0);
+    transition-delay: 2s;
+    transition: transform 1s ease-in-out;
+
+    -webkit-transform: scale(1.00) translateY(0);
+    -webkit-transition-delay: 2s;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+}
+
+#logo #secondaryImage {
+    transition-delay: 2s;
+    transition: opacity 3s ease-in-out;
+
+    -webkit-transition-delay: 2s;
+    -webkit-transition: opacity 3s ease-in-out;
+}
+
+#logo.loaded #logoImage {
+    transform: scale(0.2) translateY(-115%);
+
+    -webkit-transform: scale(0.2) translateY(-115%);
+}
+
+#logo.loaded #secondaryImage {
+    opacity: 1;
+}
+
+/*    #logo img, .logo-secondary img {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    #logo, .logo-secondary {
+        margin-top: -25vw;
+        margin-left: -25vw;
+    }
+*/

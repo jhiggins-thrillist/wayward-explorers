@@ -1,0 +1,77 @@
+block page
+  doctype html
+  html(lang='en')
+
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, minimal-ui')
+
+    //- Apple Touch Icons
+    link(rel='apple-touch-icon' sizes='57x57' href='/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon' sizes='114x114' href='/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon' sizes='72x72' href='/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon' sizes='144x144' href='/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon' sizes='60x60' href='/apple-touch-icon-60x60.png')
+    link(rel='apple-touch-icon' sizes='120x120' href='/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon' sizes='76x76' href='/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon' sizes='152x152' href='/apple-touch-icon-152x152.png')
+
+    //- iOS App Name
+    meta(name='apple-mobile-web-app-title' content='Wayward & Co. Explorers')
+
+    //- Favicons
+    link(rel='icon' type='image/png' href='/favicon-196x196.png' sizes='196x196')
+    link(rel='icon' type='image/png' href='/favicon-160x160.png' sizes='160x160')
+    link(rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96')
+    link(rel='icon' type='image/png' href='/favicon-16x16.png' sizes='16x16')
+    link(rel='icon' type='image/png' href='/favicon-32x32.png' sizes='32x32')
+
+    //- Microsoft Tile Configuration
+    meta(name='msapplication-TileColor' content='#ffffff')
+    meta(name="msapplication-TileImage" content='/mstile-144x144.png')
+    meta(name='application-name' content='Wayward & Co. Explorers')
+
+
+    title Wayward & Co. Explorers - #{title}
+
+    //- Modernizr
+    script(src='/components/modernizr/modernizr.js')
+
+    //- Stylesheets
+    block css
+
+      //- Hoefler & Frere-jones Fonts
+      link(rel='stylesheet' href='//cloud.typography.com/6191672/614142/css/fonts.css')
+
+      //- Animate.css
+      link(rel='stylesheet', href='/components/animate.css/animate.min.css')
+
+      //- Wayward Styles
+      link(rel='stylesheet', href='/css/wayward.css')
+
+    //- LiveReload Script
+    script(src='http://localhost:35729/livereload.js')
+
+  body
+
+    include header/header
+
+    //- Main content
+    div(class="wrapper")
+
+      div(class="container")
+
+        block content
+
+    include footer
+
+    //- Javascript
+    block js
+      script(src='/components/jquery/dist/jquery.min.js')
+      script(src='/components/foundation/js/foundation/foundation.js')
+      script(src='/components/foundation/js/foundation/foundation.topbar.js')
+      script(src='/components/foundation/js/foundation/foundation.orbit.js')
+      script(src='/components/video.js/dist/video-js/video.js')
+      script(src='/components/BigVideo.js/lib/bigvideo.js')
+      script(src='/components/parallax/deploy/jquery.parallax.min.js')
+      script(src='/js/wayward.js')
