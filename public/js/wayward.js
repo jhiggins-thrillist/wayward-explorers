@@ -11,6 +11,9 @@ if (!Modernizr.svg) {
         $('.left').addClass('animated fadeInLeft');
         $('.right').addClass('animated fadeInRight');
         $(this).addClass('loaded');
+        window.setTimeout(function () {
+            $('.promo-container').addClass('loaded');
+        }, 1000);
     });
 
 // });
@@ -59,4 +62,4 @@ function launchWS(winName) {
     setTimeout('msgWindow.focus()',1);
 }
 
-$('#logo').click(launchWS.bind(this, 'http://clients.mindbodyonline.com/ws.asp?studioid=182732&stype='));
+// $('#logo').click(launchWS.bind(this, 'http://clients.mindbodyonline.com/ws.asp?studioid=182732&stype='));

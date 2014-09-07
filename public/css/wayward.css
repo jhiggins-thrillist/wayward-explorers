@@ -7632,6 +7632,41 @@ ul {
 /**
  * Header
  **/
+.promo-container {
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  width: 500px;
+  max-width: 80%;
+  height: auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid white;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 1s, visibility 1s;
+          transition: opacity 1s, visibility 1s; }
+  .promo-container.loaded {
+    visibility: visible;
+    opacity: 1; }
+  .promo-container:before {
+    display: inline-block;
+    content: ' ';
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; }
+
+.promo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  width: 100%; }
+
 .menu-logo {
   margin-left: 0.5em;
   margin-bottom: 0.2em; }
@@ -7744,9 +7779,21 @@ ul {
   height: 100%;
   color: white !important;
   z-index: 1;
-  font-size: 5em; }
+  font-size: 5em;
+  line-height: 0.6em; }
   .main-link:hover {
     color: #eee; }
+    .main-link:hover small {
+      visibility: visible;
+      opacity: 1; }
+  .main-link small {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0.75s, opacity 0.75s;
+            transition: visibility 0.75s, opacity 0.75s;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.3em; }
 
 /**
  * Backgrounds

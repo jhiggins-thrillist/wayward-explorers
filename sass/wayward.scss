@@ -77,6 +77,47 @@ ul {
 //     margin-left: 8px;
 // }
 
+.promo-container {
+    font-family: $header-font-family;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    width: 500px;
+    max-width: 80%;
+    height: auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 3px solid white;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s, visibility 1s;
+
+    &.loaded {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:before {
+        display: inline-block;
+        content: ' ';
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+    }
+}
+
+.promo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    width: 100%;
+}
+
 .menu-logo {
     margin-left: 0.5em;
     margin-bottom: 0.2em;
@@ -212,9 +253,24 @@ ul {
     color: white !important;
     z-index: 1;
     font-size: 5em;
+    line-height: 0.6em;
 
     &:hover {
         color: #eee;
+
+        small {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    small {
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0.75s, opacity 0.75s;
+        color: white    ;
+        text-transform: uppercase;
+        font-size: 0.3em;
     }
 
 }
