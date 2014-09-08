@@ -67,4 +67,7 @@ function launchWS(winName) {
     setTimeout('msgWindow.focus()',1);
 }
 
-// $('#logo').click(launchWS.bind(this, 'http://clients.mindbodyonline.com/ws.asp?studioid=182732&stype='));
+$('.js-sign-up').click(function (e) {
+    e.preventDefault();
+    launchWS('http://clients.mindbodyonline.com/classic/ws?studioid=182732&stype=-98');
+});
