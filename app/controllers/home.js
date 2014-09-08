@@ -58,9 +58,21 @@ router.get('/view-schedule', function (req, res, next) {
  */
 router.get('/sign-up-for-classes', function (req, res, next) {
 
-    res.render('pages/studio', {
+    res.render('pages/sign-up', {
       title: 'Wayward Explorers',
       page: 'sign-up'
+    });
+
+});
+
+/**
+ * Sign Up Success
+ */
+router.get('/sign-up-success', function (req, res, next) {
+
+    res.render('pages/sign-up-success', {
+      title: 'Wayward Explorers',
+      page: 'sign-up-success'
     });
 
 });

@@ -7933,3 +7933,41 @@ ul {
       top: 1em; }
     .main-side .main-link.main-right > * {
       bottom: 1em; } }
+
+.home-page .top-bar {
+  display: none; }
+
+#hc_registrations_ce88831703 {
+  max-width: 50%;
+  margin: 0 auto; }
+  #hc_registrations_ce88831703 div.healcode div.hc_footer {
+    display: none !important; }
+
+#hc-register {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: #43AC6A;
+  border-color: #368a54;
+  color: #FFFFFF;
+  -webkit-transition: background-color 300ms ease-out;
+          transition: background-color 300ms ease-out; }
+  #hc-register:hover, #hc-register:focus {
+    background-color: #368a54; }
+  #hc-register:hover, #hc-register:focus {
+    color: #FFFFFF; }

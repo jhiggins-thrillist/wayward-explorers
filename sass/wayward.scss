@@ -433,3 +433,20 @@ ul {
         }
     }
 }
+
+.home-page .top-bar {
+    display: none;
+}
+
+#hc_registrations_ce88831703 {
+    max-width: 50%;
+    margin: 0 auto;
+
+    div.healcode div.hc_footer {
+        display: none !important;
+    }
+}
+
+#hc-register {
+    @include button($bg: $success-color);
+}
