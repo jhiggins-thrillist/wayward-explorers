@@ -7938,10 +7938,32 @@ ul {
   display: none; }
 
 #hc_registrations_ce88831703 {
-  max-width: 50%;
+  width: 100%;
+  padding: 0 2em;
+  max-width: 640px;
   margin: 0 auto; }
   #hc_registrations_ce88831703 div.healcode div.hc_footer {
     display: none !important; }
+
+.hc-label {
+  font-size: 1.2em;
+  margin-top: 1.618em;
+  margin-bottom: 0.5em; }
+
+.hc-registration-field {
+  position: relative; }
+  .hc-registration-field .required {
+    color: red;
+    position: absolute;
+    right: -1em;
+    top: 0;
+    padding: 0.5em 0; }
+
+.hc-birth-date select {
+  width: auto;
+  display: inline-block;
+  min-width: 6em; }
+
 
 #hc-register {
   border-style: solid;
