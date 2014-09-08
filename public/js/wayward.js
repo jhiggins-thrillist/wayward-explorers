@@ -69,5 +69,5 @@ function launchWS(winName) {
 
 $('.js-sign-up').click(function (e) {
     e.preventDefault();
-    launchWS('http://clients.mindbodyonline.com/classic/ws?studioid=182732&stype=-98');
+    launchWS('https://clients.mindbodyonline.com/classic/ws?studioid=182732&stype=-98');
 });
